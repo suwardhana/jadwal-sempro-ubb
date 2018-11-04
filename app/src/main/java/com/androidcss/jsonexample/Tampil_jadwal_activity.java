@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,6 +39,8 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra("jenis");
         tipe = message;
+        Log.d("tipe", tipe);
+        Log.d("message",message);
         //Make call to AsyncTask
         new AsyncLogin().execute();
     }
@@ -64,8 +67,10 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
 
                 // Enter URL address where your json file resides
                 // Even you can make call to php file which returns json data
-                url = new URL("http://192.168.100.8/deny/api/"+tipe);
+                Log.d("tipe dalam async", tipe);
 
+                url = new URL("http://192.168.100.8/deny/api/get_jadwal_by_api/"+tipe);
+                Log.d("alamat url", "http://192.168.100.8/deny/api/get_jadwal_by_api/"+tipe);
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -91,7 +96,7 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
             try {
 
                 int response_code = conn.getResponseCode();
-
+                Log.d("sebelum masuk result",String.valueOf(response_code));
                 // Check if successful connection made
                 if (response_code == HttpURLConnection.HTTP_OK) {
 
@@ -106,6 +111,7 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
                     }
 
                     // Pass data to onPostExecute method
+                    Log.d("isi resultt",result.toString());
                     return (result.toString());
 
                 } else {
@@ -141,6 +147,7 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
                     JSONObject json_data = jArray.getJSONObject(i);
                     DataJadwal jadwalData = new DataJadwal();
                     jadwalData.jenis = json_data.getString("jenis");
+                    Log.d("jenisdalamjson",json_data.getString("jenis"));
                     jadwalData.judul = json_data.getString("judul");
                     jadwalData.nama = json_data.getString("nama");
                     jadwalData.waktu = json_data.getString("waktu");

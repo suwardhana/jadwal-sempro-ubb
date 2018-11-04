@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
     public void launchSecondActivity(View view) {
 
         Log.d("coba", "Button clicked!");
-//        Intent intent = new Intent(this, Tampil_jadwal_activity.class);
-//        TextView editText = (TextView) findViewById(R.id.textJudulApp);
-//        String message = editText.getText().toString();
-//        intent.putExtra("jenis", message);
-//        startActivity(intent);
+        Intent intent = new Intent(this, Tampil_jadwal_activity.class);
+        TextView editText = (TextView) findViewById(R.id.textJudulApp);
+        String message = "1";
+        intent.putExtra("jenis", message);
+        startActivity(intent);
     }
 
 
