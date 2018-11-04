@@ -18,12 +18,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the user taps the Send button */
-    public void launchSecondActivity(View view) {
+    public void launchPendadaran(View view) {
 
-        Log.d("coba", "Button clicked!");
+        Log.d("coba", "Button pendadaran clicked!");
         Intent intent = new Intent(this, Tampil_jadwal_activity.class);
-        TextView editText = (TextView) findViewById(R.id.textJudulApp);
+        String message = "3";
+        intent.putExtra("jenis", message);
+        startActivity(intent);
+    }
+    /** Called when the user taps the Send button */
+    public void launchSempro(View view) {
+
+        Log.d("coba", "Button sempro clicked!");
+        Intent intent = new Intent(this, Tampil_jadwal_activity.class);
         String message = "1";
+        intent.putExtra("jenis", message);
+        startActivity(intent);
+    }
+    /** Called when the user taps the Send button */
+    public void launchSemhas(View view) {
+
+        Log.d("coba", "Button semhas clicked!");
+        Intent intent = new Intent(this, Tampil_jadwal_activity.class);
+        String message = "2";
         intent.putExtra("jenis", message);
         startActivity(intent);
     }
