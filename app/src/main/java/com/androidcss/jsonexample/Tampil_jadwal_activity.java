@@ -75,8 +75,8 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
                 // Even you can make call to php file which returns json data
                 Log.d("tipe dalam async", tipe);
 
-                url = new URL("http://192.168.100.8/deny/api/get_jadwal_by_api/"+tipe);
-                Log.d("alamat url", "http://192.168.100.8/deny/api/get_jadwal_by_api/"+tipe);
+                url = new URL("https://sita.ubb.ac.id/api/get_jadwal_by_api/"+tipe);
+                Log.d("alamat url", "https://sita.ubb.ac.id/api/get_jadwal_by_api/"+tipe);
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
