@@ -1,126 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/ivFprofil"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:scaleType="fitXY" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal">
 
-    <TextView
-        android:id="@+id/textNama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_toLeftOf="@+id/textTanggal"
-        android:layout_toRightOf="@id/ivFprofil"
-        android:text="Nama Mahasiswa"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    <TextView
-        android:id="@+id/textJenis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text="Jenis"
-        android:layout_alignParentRight="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#666" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textTanggal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textJenis"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="5dp"
-        android:text="Tanggal"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorAccent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textWaktu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textTanggal"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:text="Waktu"
-        android:layout_alignParentRight="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
+        <ImageView
+            android:id="@+id/ivFprofil"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY" />
 
-    <TextView
-        android:id="@+id/textRuang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textWaktu"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="5dp"
-        android:text="Ruang"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
+        <TextView
+            android:id="@+id/textNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:text="Nama Mahasiswa"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/textPembimbing1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textNama"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/ivFprofil"
-        android:layout_toLeftOf="@+id/textTanggal"
-        android:text="pembimbing1"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
+        <TextView
+            android:id="@+id/textTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textNama"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:text="Tanggal"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textPembimbing2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textPembimbing1"
-        android:layout_toLeftOf="@+id/textTanggal"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/ivFprofil"
-        android:text="pembimbing1"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
-    <TextView
-        android:id="@+id/textPenguji1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textPembimbing2"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/ivFprofil"
-        android:layout_toLeftOf="@+id/textRuang"
-        android:text="Penguji1"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
-    <TextView
-        android:id="@+id/textPenguji2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textPenguji1"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/ivFprofil"
-        android:text="Penguji2"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
+        <TextView
+            android:id="@+id/textRuang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTanggal"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:text="Ruang"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/textWaktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textRuang"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:layout_marginLeft="5dp"
+            android:text="Waktu"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/textPembimbing1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textWaktu"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:layout_marginLeft="5dp"
+            android:text="pembimbing1"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/textPembimbing2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textPembimbing1"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:layout_marginLeft="5dp"
+            android:text="pembimbing2"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/textPenguji2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textPenguji1"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:layout_marginLeft="5dp"
+            android:text="Penguji2"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
 
 
-    <TextView
-        android:id="@+id/textJudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textPenguji2"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/ivFprofil"
-        android:text="Judul"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#666" />
-</RelativeLayout>
+
+        <TextView
+            android:id="@+id/textPenguji1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textPembimbing2"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:layout_marginLeft="5dp"
+            android:text="Penguji1"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/textJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textPenguji2"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ivFprofil"
+            android:gravity="center_horizontal"
+            android:text="Judul"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+    </RelativeLayout>
+
+
+</LinearLayout>

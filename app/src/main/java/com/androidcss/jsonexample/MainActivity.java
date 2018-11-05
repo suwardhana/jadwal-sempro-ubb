@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("coba", "Button pendadaran clicked!");
         Intent intent = new Intent(this, Tampil_jadwal_activity.class);
         String message = "3";
+        String judulapp = "Pendadaran";
         intent.putExtra("jenis", message);
+        intent.putExtra("judulapp", judulapp);
         startActivity(intent);
     }
     /** Called when the user taps the Send button */
@@ -32,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("coba", "Button sempro clicked!");
         Intent intent = new Intent(this, Tampil_jadwal_activity.class);
         String message = "1";
+        String judulapp = "Sempro";
         intent.putExtra("jenis", message);
+        intent.putExtra("judulapp", judulapp);
         startActivity(intent);
     }
     /** Called when the user taps the Send button */
@@ -41,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("coba", "Button semhas clicked!");
         Intent intent = new Intent(this, Tampil_jadwal_activity.class);
         String message = "2";
+        String judulapp = "Semhas";
         intent.putExtra("jenis", message);
+        intent.putExtra("judulapp", judulapp);
         startActivity(intent);
     }
 

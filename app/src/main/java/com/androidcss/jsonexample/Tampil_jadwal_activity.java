@@ -2,12 +2,16 @@ package com.androidcss.jsonexample;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,10 +38,15 @@ public class Tampil_jadwal_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_tampil_jadwal);
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         String message = intent.getStringExtra("jenis");
+        String judulapp = intent.getStringExtra("judulapp");
+        TextView textJudulApp;
+        textJudulApp = findViewById(R.id.textJudulApp);
+        textJudulApp.setText("Jadwal " + judulapp);
         tipe = message;
         Log.d("tipe", tipe);
         Log.d("message",message);

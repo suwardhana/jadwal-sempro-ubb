@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
@@ -43,16 +44,15 @@ public class AdapterJadwal extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         MyHolder myHolder= (MyHolder) holder;
         DataJadwal current=data.get(position);
         myHolder.textNama.setText(current.nama);
-        myHolder.textTanggal.setText(current.tanggal);
+        myHolder.textTanggal.setText("Jadwal : " + current.tanggal);
         myHolder.textJudul.setText(current.judul);
-        myHolder.textWaktu.setText("Jam : " + current.waktu);
+        myHolder.textWaktu.setText("Pukul : " + current.waktu);
         myHolder.textRuang.setText("Ruang : " + current.ruang);
-        myHolder.textJenis.setText(current.jenis);
+//        myHolder.textNamaBtn.setText("Jadwal " + current.jenis);
         myHolder.textPembimbing1.setText("Pembimbing 1 : " + current.pembimbing1);
         myHolder.textPembimbing2.setText("Pembimbing 2 : " + current.pembimbing2);
         myHolder.textPenguji1.setText("Penguji 1 : " + current.penguji1);
         myHolder.textPenguji2.setText("Penguji 2 : " + current.penguji2);
-        myHolder.textTanggal.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
 
         // load image into imageview using glide
         Glide.with(context).load("http://192.168.100.8/deny/assets/img/mahasiswa/" + current.fotoprofil)
@@ -82,6 +82,7 @@ public class AdapterJadwal extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         TextView textPembimbing2;
         TextView textPenguji1;
         TextView textPenguji2;
+//        Button textNamaBtn;
 
         // create constructor to get widget reference
         public MyHolder(View itemView) {
@@ -92,7 +93,7 @@ public class AdapterJadwal extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             textJudul = (TextView) itemView.findViewById(R.id.textJudul);
             textWaktu = (TextView) itemView.findViewById(R.id.textWaktu);
             textRuang = (TextView) itemView.findViewById(R.id.textRuang);
-            textJenis = (TextView) itemView.findViewById(R.id.textJenis);
+//            textNamaBtn = (Button) itemView.findViewById(R.id.textNamaBtn);
             textPembimbing1 = (TextView) itemView.findViewById(R.id.textPembimbing1);
             textPembimbing2 = (TextView) itemView.findViewById(R.id.textPembimbing2);
             textPenguji1 = (TextView) itemView.findViewById(R.id.textPenguji1);
