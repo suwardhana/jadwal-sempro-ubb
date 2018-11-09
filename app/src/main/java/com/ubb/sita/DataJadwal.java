@@ -1,4 +1,4 @@
-package com.androidcss.jsonexample;
+package com.ubb.sita;
 
 public class DataJadwal {
 

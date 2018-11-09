@@ -30,7 +30,6 @@
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/ivFprofil"
             android:text="Nama Mahasiswa"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -41,7 +40,6 @@
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/ivFprofil"
             android:text="Tanggal"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -52,7 +50,6 @@
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/ivFprofil"
             android:text="Ruang"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#666" />
 
@@ -64,7 +61,6 @@
             android:layout_toRightOf="@id/ivFprofil"
             android:layout_marginLeft="5dp"
             android:text="Waktu"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#666" />
 
@@ -72,11 +68,10 @@
             android:id="@+id/textPembimbing1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textWaktu"
-            android:layout_toRightOf="@id/ivFprofil"
-            android:layout_marginLeft="5dp"
+            android:layout_below="@id/ivFprofil"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:text="pembimbing1"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#666" />
 
@@ -85,10 +80,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textPembimbing1"
-            android:layout_toRightOf="@id/ivFprofil"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="8dp"
             android:text="pembimbing2"
-            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/textPenguji1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textPembimbing2"
+            android:layout_marginLeft="8dp"
+            android:text="Penguji1"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#666" />
 
@@ -97,24 +100,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textPenguji1"
-            android:layout_toRightOf="@id/ivFprofil"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="8dp"
             android:text="Penguji2"
-            android:textAllCaps="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#666" />
-
-
-
-        <TextView
-            android:id="@+id/textPenguji1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textPembimbing2"
-            android:layout_toRightOf="@id/ivFprofil"
-            android:layout_marginLeft="5dp"
-            android:text="Penguji1"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#666" />
 
@@ -123,11 +110,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textPenguji2"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/ivFprofil"
+            android:layout_marginLeft="8dp"
             android:gravity="center_horizontal"
             android:text="Judul"
-            android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#666" />
     </RelativeLayout>

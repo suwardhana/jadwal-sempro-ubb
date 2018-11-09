@@ -1,10 +1,12 @@
-package com.androidcss.jsonexample;
+package com.ubb.sita;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.ubb.sitaubb.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void launchPendadaran(View view) {
 
-        Log.d("coba", "Button pendadaran clicked!");
+        Log.d("coba", "Button  pendadaran clicked!");
         Intent intent = new Intent(this, Tampil_jadwal_activity.class);
         String message = "3";
         String judulapp = "Pendadaran";

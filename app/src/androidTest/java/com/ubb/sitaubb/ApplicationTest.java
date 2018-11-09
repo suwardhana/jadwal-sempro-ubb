@@ -1,4 +1,4 @@
-package com.androidcss.jsonexample;
+package com.ubb.sitaubb;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

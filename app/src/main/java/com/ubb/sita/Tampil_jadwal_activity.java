@@ -1,4 +1,4 @@
-package com.androidcss.jsonexample;
+package com.ubb.sita;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ubb.sitaubb.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

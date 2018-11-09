@@ -1,14 +1,14 @@
-package com.androidcss.jsonexample;
+package com.ubb.sita;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ubb.sitaubb.R;
 import com.bumptech.glide.Glide;
 import java.util.Collections;
 import java.util.List;
@@ -55,7 +55,7 @@ public class AdapterJadwal extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         myHolder.textPenguji2.setText("Penguji 2 : " + current.penguji2);
 
         // load image into imageview using glide
-        Glide.with(context).load("http://192.168.100.8/deny/assets/img/mahasiswa/" + current.fotoprofil)
+        Glide.with(context).load("https://sita.ubb.ac.id/assets/img/mahasiswa/" + current.fotoprofil)
                 .placeholder(R.drawable.ic_img_error)
                 .error(R.drawable.ic_img_error)
                 .into(myHolder.ivFprofil);
